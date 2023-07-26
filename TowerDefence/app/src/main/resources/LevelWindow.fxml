@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+ fx:controller="Controllers.LevelWindowController">
+   <children>
+      <Canvas fx:id="canvas" height="400.0" layoutX="-2.0" nodeOrientation="INHERIT" width="600.0" />
+      <Accordion id="accordion">
+        <panes>
+          <TitledPane animated="true" text="Round Tower">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="roundTowerButton" mnemonicParsing="false" onAction="#handleRoundTowerButton" text="Round Tower" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="true" text="Long Tower">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Long Tower"  onAction="#handleLongTowerButton"/>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="true" text="Start Game">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="startLevelButton" mnemonicParsing="false" onAction="#handleStartLevel" text="START!" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="true" text="Continue">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="gameOverButton" mnemonicParsing="false" onAction="#handleGameOverButton" text="Restart" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <VBox alignment="CENTER" layoutX="233.0" opacity="0.6" prefHeight="122.0" prefWidth="360.0" style="-fx-background-color: red;">
+         <children>
+            <Label fx:id="currentLevelLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="174.0" text="Level: 0" />
+            <Label fx:id="availableTowersLabel" alignment="CENTER" prefHeight="33.0" prefWidth="174.0" text="" />
+            <Label fx:id="gameResultLabel" alignment="CENTER" prefHeight="33.0" prefWidth="174.0" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </VBox>
+   </children>
+</Pane>
